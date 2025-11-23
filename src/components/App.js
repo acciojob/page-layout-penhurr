@@ -3,13 +3,13 @@ import React from "react";
 import './../styles/App.css';
 
 
-const PageLayout = ({header, children, footer}) => {
+const PageLayout = (props) => {
 
   return (
     <div>
-      <h1>{header}</h1>
-      <p>{children}</p>
-      <p>{footer}</p>
+      <h1>{props.header}</h1>
+      <p>{props.children}</p>
+      <p>{props.footer}</p>
     </div>
   )
 }
@@ -21,7 +21,7 @@ const App = () => {
         <PageLayout 
           header='Welcome to my website'
           children='This is the content of my website.'
-          footer='© 2023 My Website.All rights reserved.'
+          footer='© 2023 My Website. All rights reserved.'
         />
     </div>
   )
